@@ -109,6 +109,8 @@ void Error_Handler(void);
 #define DETECTN_GPIO_Port GPIOE
 #define I2C1_SDA_Pin GPIO_PIN_7
 #define I2C1_SDA_GPIO_Port GPIOB
+#define NJTRST_Pin GPIO_PIN_4
+#define NJTRST_GPIO_Port GPIOB
 #define RMII_TXD0_Pin GPIO_PIN_13
 #define RMII_TXD0_GPIO_Port GPIOG
 #define RMII_TX_EN_Pin GPIO_PIN_11

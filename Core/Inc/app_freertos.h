@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -67,7 +67,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-
+void StartLED1Task(void *argument);
 /* USER CODE END Application */
 
 #ifdef __cplusplus

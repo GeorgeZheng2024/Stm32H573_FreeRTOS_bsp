@@ -42,6 +42,13 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+/*LED task define*/
+osThreadId_t LED1TaskHandle;
+const osThreadAttr_t LED1Task_attributes = {
+  .name = "LED1Task",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -87,6 +94,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  LED1TaskHandle = osThreadNew(StartLED1Task, NULL, &LED1Task_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -114,6 +122,22 @@ void StartDefaultTask(void *argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-
+/**
+* @brief Function implementing the LED1 thread.
+* @param argument: Not used
+* @retval None
+*/
+void StartLED1Task(void *argument)
+{
+  HAL_GPIO_WritePin(USER_LED1_GPIO_Port,USER_LED1_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED2_GPIO_Port,USER_LED2_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED3_GPIO_Port,USER_LED3_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED4_GPIO_Port,USER_LED4_Pin,GPIO_PIN_SET);
+  while(1)
+  {
+    HAL_GPIO_TogglePin(USER_LED1_GPIO_Port,USER_LED1_Pin);
+    vTaskDelay(500);
+  }
+}
 /* USER CODE END Application */
 
