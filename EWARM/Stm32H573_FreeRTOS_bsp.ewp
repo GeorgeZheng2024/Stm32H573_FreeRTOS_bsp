@@ -74,7 +74,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>9.40.1.63870</state>
+                    <state>9.50.2.71646</state>
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
@@ -1140,6 +1140,9 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h5xx_it.c</name>
                 </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
+                </file>
             </group>
         </group>
     </group>
@@ -1194,6 +1197,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_tim_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_uart.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_uart_ex.c</name>
             </file>
         </group>
     </group>

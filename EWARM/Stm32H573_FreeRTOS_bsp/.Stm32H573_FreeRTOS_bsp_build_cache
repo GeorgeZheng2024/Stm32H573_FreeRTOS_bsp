@@ -3,9 +3,9 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\Exe\Stm32H573_FreeRTOS_bsp.out</Path>
+            <Path>C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\Exe\Stm32H573_FreeRTOS_bsp.out</Path>
             <Output>
-                <Path>C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\List\Stm32H573_FreeRTOS_bsp.map</Path>
+                <Path>C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\List\Stm32H573_FreeRTOS_bsp.map</Path>
             </Output>
         </Parent>
     </Tool>

@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.general.xcl" --backend -f "C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.general.xcl" --backend -f "C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.general.xcl" "--debug_file=%~1" --backend -f "C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\settings\Stm32H573_FreeRTOS_bsp.Stm32H573_FreeRTOS_bsp.driver.xcl" 
 
 @echo off 
 :end

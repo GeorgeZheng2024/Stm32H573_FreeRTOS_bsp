@@ -2,9 +2,9 @@
 
 "C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\bin\armSTLINK.dll" 
 
-"C:\Users\Administrator\Desktop\STM\Stm32H573_FreeRTOS_bsp\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\Exe\Stm32H573_FreeRTOS_bsp.out" 
+"C:\George\Git\STM32573_FreeRTOS_BSP\Stm32H573_FreeRTOS_bsp\EWARM\Stm32H573_FreeRTOS_bsp\Exe\Stm32H573_FreeRTOS_bsp.out" 
 
---plugin="C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\bin\armbat.dll" 
+--plugin="C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\bin\armLibSupportUniversal.dll" 
 
 --device_macro="C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm/config/debugger/ST/STM32H5xx.dmac" 
 
