@@ -96,7 +96,6 @@
      PD13   ------> OCTOSPI1_IO3
      PA2   ------> ETH_MDIO
      PA4   ------> ADCx_INP18
-     PB10   ------> USART3_TX
      PB15   ------> SPI2_MOSI
      PD8   ------> FMC_D13_DA13
      PC3   ------> SAI1_D3
@@ -107,7 +106,6 @@
      PE9   ------> FMC_D6_DA6
      PE14   ------> FMC_D11_DA11
      PE15   ------> FMC_D12_DA12
-     PB11   ------> USART3_RX
      PH8   ------> SPI5_MOSI
      PH10   ------> S_TIM5_CH1
      PB14   ------> UCPD1_CC2
@@ -458,14 +456,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : ARD_D1_Pin ARD_D0_Pin */
-  GPIO_InitStruct.Pin = ARD_D1_Pin|ARD_D0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : ARD_D11_Pin */
   GPIO_InitStruct.Pin = ARD_D11_Pin;

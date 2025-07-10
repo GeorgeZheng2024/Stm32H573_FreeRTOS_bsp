@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +49,13 @@ osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
   .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
+/* Definitions for LED1 */
+osThreadId_t LED1Handle;
+const osThreadAttr_t LED1_attributes = {
+  .name = "LED1",
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 
@@ -85,6 +92,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
+  /* creation of LED1 */
+  LED1Handle = osThreadNew(StartTaskLED1, NULL, &LED1_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -110,6 +120,30 @@ void StartDefaultTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END defaultTask */
+}
+
+/* USER CODE BEGIN Header_StartTaskLED1 */
+/**
+* @brief Function implementing the LED1 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTaskLED1 */
+void StartTaskLED1(void *argument)
+{
+  /* USER CODE BEGIN LED1 */
+  HAL_GPIO_WritePin(USER_LED1_GPIO_Port,USER_LED1_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED2_GPIO_Port,USER_LED2_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED3_GPIO_Port,USER_LED3_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(USER_LED4_GPIO_Port,USER_LED4_Pin,GPIO_PIN_SET);
+  /* Infinite loop */
+  for(;;)
+  {
+    HAL_GPIO_TogglePin(USER_LED1_GPIO_Port,USER_LED1_Pin);
+    printf("hello LED1 flashes\n");
+    osDelay(500);
+  }
+  /* USER CODE END LED1 */
 }
 
 /* Private application code --------------------------------------------------*/
