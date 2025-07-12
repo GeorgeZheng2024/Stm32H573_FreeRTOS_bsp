@@ -19,7 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os2.h"
-#include "memorymap.h"
+#include "sdmmc.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -58,7 +58,8 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+extern SD_HandleTypeDef        hsd_sdmmc[SD_INSTANCES_NBR];
+extern uint32_t sdStatus; //SD card status.
 /* USER CODE END 0 */
 
 /**
@@ -91,13 +92,42 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
+  //MX_SDMMC1_SD_Init();
+  BSP_MX_SDMMC1_SD_Init(hsd_sdmmc);
   /* USER CODE BEGIN 2 */
+  if(BSP_SD_DeInit(0) <0)
+  {
+    printf("Error:BSP_SD_DeInit\n");
+  }
+  else
+  {
+    printf("Pass:BSP_SD_DeInit step\n");
+  }
+
+  if(BSP_SD_DetectITConfig(0) < 0)
+  {
+    printf("Error:BSP_SD_DetectITConfig\n");
+  }
+  else
+  {
+
+    printf("Pass:BSP_SD_DetectITConfig step\n");
+  }
+
+  if(BSP_SD_Init(0)<0)
+  {
+    printf("Error:BSP_SD_Init\n");
+  }
+  else
+  {
+    sdStatus = SD_PRESENT;
+    printf("Pass:SD init success\n");
+  }
 
   /* USER CODE END 2 */
 
   /* Init scheduler */
   osKernelInitialize();
-
   /* Call init function for freertos objects (in app_freertos.c) */
   MX_FREERTOS_Init();
 
@@ -213,8 +243,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

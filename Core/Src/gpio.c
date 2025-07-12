@@ -57,27 +57,20 @@
      PE4   ------> SAI1_D2
      PI6   ------> SAI2_SD_A
      PB7   ------> I2C1_SDA
-     PB4(NJTRST)   ------> DEBUG_JTRST
      PG13   ------> ETH_TXD0
      PG11   ------> ETH_TX_EN
-     PD2   ------> SDMMC1_CMD
-     PC12   ------> SDMMC1_CK
-     PC11   ------> SDMMC1_D3
      PA15(JTDI)   ------> DEBUG_JTDI
      PA12   ------> USB_DP
      PC15-OSC32_OUT(OSC32_OUT)   ------> RCC_OSC32_OUT
      PC14-OSC32_IN(OSC32_IN)   ------> RCC_OSC32_IN
      PE5   ------> DEBUG_TRACED2
      PE2   ------> DEBUG_TRACECLK
-     PC10   ------> SDMMC1_D2
      PA11   ------> USB_DM
      PA13(JTMS/SWDIO)   ------> DEBUG_JTMS-SWDIO
      PA10   ------> USART1_RX
      PA9   ------> USART1_TX
      PF0   ------> FMC_A0
      PI10   ------> ETH_RX_ER
-     PC9   ------> SDMMC1_D1
-     PC8   ------> SDMMC1_D0
      PA8   ------> S_TIM1_CH1
      PC7   ------> FMC_NE1
      PH0-OSC_IN(PH0)   ------> RCC_OSC_IN
@@ -282,24 +275,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.Alternate = GPIO_AF2_SAI1;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : SDIO1_CMD_Pin */
-  GPIO_InitStruct.Pin = SDIO1_CMD_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(SDIO1_CMD_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : SDIO1_CK_Pin SDIO1_D3_Pin SDIO1_D2_Pin SDIO1_D1_Pin
-                           SDIO1_D0_Pin */
-  GPIO_InitStruct.Pin = SDIO1_CK_Pin|SDIO1_D3_Pin|SDIO1_D2_Pin|SDIO1_D1_Pin
-                          |SDIO1_D0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : USB_FS_P_Pin USB_FS_N_Pin */
   GPIO_InitStruct.Pin = USB_FS_P_Pin|USB_FS_N_Pin;

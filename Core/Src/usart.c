@@ -21,7 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-#include <stdio.h>
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart3;
@@ -146,7 +146,12 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 *********************************************************/
 int fputc(int ch,FILE *f)
 {
+  while(huart3.gState != HAL_UART_STATE_READY)
+  {
+
+  }
   HAL_UART_Transmit (&huart3 ,(uint8_t *)&ch,1,HAL_MAX_DELAY );
+
   return ch;
 }
 /*********************************************************

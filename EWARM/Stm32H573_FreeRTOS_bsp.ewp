@@ -613,7 +613,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -1015,7 +1015,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state></state>
+                    <state>Stm32H573_FreeRTOS_bsp_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1126,10 +1126,28 @@
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\lfs.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\lfs.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\lfs_util.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\lfs_util.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\main.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\memorymap.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\sdmmc.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32h573i_discovery_sd.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\stm32h573i_discovery_sd.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h5xx_hal_msp.c</name>
@@ -1181,6 +1199,12 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_gpio.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_mmc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_mmc_ex.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_pwr.c</name>
             </file>
             <file>
@@ -1193,6 +1217,15 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_rcc_ex.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_sd.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_sd_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_sdio.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_tim.c</name>
             </file>
             <file>
@@ -1203,6 +1236,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_hal_uart_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_ll_dlyb.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H5xx_HAL_Driver\Src\stm32h5xx_ll_sdmmc.c</name>
             </file>
         </group>
     </group>
