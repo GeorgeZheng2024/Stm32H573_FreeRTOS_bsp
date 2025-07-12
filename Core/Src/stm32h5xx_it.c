@@ -204,5 +204,17 @@ void SDMMC1_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+/**
+  * @brief This function handles EXTI Line14 interrupt.
+  */
+void EXTI14_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI14_IRQn 0 */
 
+  /* USER CODE END EXTI14_IRQn 0 */
+  BSP_SD_DETECT_IRQHandler(0);
+  /* USER CODE BEGIN EXTI14_IRQn 1 */
+
+  /* USER CODE END EXTI14_IRQn 1 */
+}
 /* USER CODE END 1 */

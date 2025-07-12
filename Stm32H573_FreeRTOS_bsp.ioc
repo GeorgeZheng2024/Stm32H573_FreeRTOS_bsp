@@ -910,5 +910,7 @@ VP_SYS_VS_tim7.Signal=SYS_VS_tim7
 board=STM32H573I-DK
 boardIOC=true
 rtos.0.ip=STMicroelectronics.X-CUBE-FREERTOS.1.3.1
+rtos.0.queues.0=allocationType,Dynamic;bufferName,NULL;controlBlockName,NULL;itemNumber,32;itemSize,uint16_t;name,fileRecord
 rtos.0.tasks.0=allocationType,Dynamic;bufferName,NULL;codeGen,Default;controlBlockName,NULL;entry,StartDefaultTask;name,defaultTask;parameter,NULL;priority,osPriorityNormal;stackSize,128
 rtos.0.tasks.1=allocationType,Dynamic;bufferName,NULL;codeGen,Default;controlBlockName,NULL;entry,StartTaskLED1;name,LED1;parameter,NULL;priority,osPriorityLow;stackSize,128
+rtos.0.tasks.2=allocationType,Dynamic;bufferName,NULL;codeGen,Default;controlBlockName,NULL;entry,StartTaskSD;name,SD;parameter,NULL;priority,osPriorityLow;stackSize,128
